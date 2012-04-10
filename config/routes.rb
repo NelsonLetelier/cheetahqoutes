@@ -1,4 +1,18 @@
 Cheetahquotes::Application.routes.draw do
+  resources :company_laptops
+
+  resources :graphic_memories
+
+  resources :memories
+
+  resources :cores
+
+  resources :hard_drives
+
+  resources :companies
+
+  resources :laptops
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
