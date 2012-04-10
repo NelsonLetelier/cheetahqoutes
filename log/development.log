@@ -1,0 +1,603 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon Apr 09 21:03:49 -0400 2012
+Served asset /rails.png - 304 Not Modified (4ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon Apr 09 21:17:46 -0400 2012
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/laptops" for 127.0.0.1 at Mon Apr 09 21:17:55 -0400 2012
+Processing by LaptopsController#index as HTML
+Completed 500 Internal Server Error in 61ms
+
+ActiveRecord::StatementInvalid (Could not find table 'laptops'):
+  app/controllers/laptops_controller.rb:5:in `index'
+
+
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/1.8/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateLaptops (20120410011653)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "laptops" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "precio" integer, "modelo" varchar(255), "marca" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120410011653')
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("laptops")
+
+
+Started GET "/laptops" for 127.0.0.1 at Mon Apr 09 21:18:33 -0400 2012
+Processing by LaptopsController#index as HTML
+  [1m[36mLaptop Load (0.1ms)[0m  [1mSELECT "laptops".* FROM "laptops" [0m
+  Rendered laptops/index.html.erb within layouts/application (1.4ms)
+Compiled laptops.css  (34ms)  (pid 29686)
+Compiled scaffolds.css  (21ms)  (pid 29686)
+Compiled application.css  (107ms)  (pid 29686)
+Compiled jquery.js  (7ms)  (pid 29686)
+Compiled jquery_ujs.js  (0ms)  (pid 29686)
+Compiled laptops.js  (296ms)  (pid 29686)
+Compiled application.js  (424ms)  (pid 29686)
+Completed 200 OK in 613ms (Views: 604.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/laptops.css?body=1" for 127.0.0.1 at Mon Apr 09 21:18:34 -0400 2012
+Served asset /laptops.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Mon Apr 09 21:18:34 -0400 2012
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Apr 09 21:18:34 -0400 2012
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Mon Apr 09 21:18:34 -0400 2012
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Apr 09 21:18:34 -0400 2012
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/laptops.js?body=1" for 127.0.0.1 at Mon Apr 09 21:18:34 -0400 2012
+Served asset /laptops.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Apr 09 21:18:34 -0400 2012
+Served asset /application.js - 200 OK (42ms)
+
+
+Started GET "/laptops/new" for 127.0.0.1 at Mon Apr 09 21:18:38 -0400 2012
+Processing by LaptopsController#new as HTML
+  Rendered laptops/_form.html.erb (28.7ms)
+  Rendered laptops/new.html.erb within layouts/application (61.1ms)
+Completed 200 OK in 69ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateLaptops (20120410011653)
+Migrating to CreateCompanies (20120410012105)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "pais" varchar(255), "ciudad" varchar(255), "direccion" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120410012105')[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to CreateHardDrives (20120410012337)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "hard_drives" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "marca" varchar(255), "tamano" integer, "cache" integer, "rpm" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120410012337')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateCores (20120410012715)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "cores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "frecuencia" integer, "marca" integer, "nucleos" integer, "modelo" varchar(255), "nombre" varchar(255), "thread" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120410012715')[0m
+  [1m[35m (3.2ms)[0m  commit transaction
+Migrating to CreateMemories (20120410012810)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "memories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "marca" varchar(255), "frecuencia" integer, "tamaño" integer, "ddr" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120410012810')[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateGraphicMemories (20120410012931)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "graphic_memories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "marca" varchar(255), "modelo" varchar(255), "ddr" integer, "capacidad" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120410012931')[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("companies")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("cores")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("graphic_memories")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hard_drives")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("laptops")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("memories")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateLaptops (20120410011653)
+Migrating to CreateCompanies (20120410012105)
+Migrating to CreateHardDrives (20120410012337)
+Migrating to CreateCores (20120410012715)
+Migrating to CreateMemories (20120410012810)
+Migrating to CreateGraphicMemories (20120410012931)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("companies")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("cores")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("graphic_memories")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hard_drives")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("laptops")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("memories")[0m
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateLaptops (20120410011653)
+Migrating to CreateCompanies (20120410012105)
+Migrating to CreateHardDrives (20120410012337)
+Migrating to CreateCores (20120410012715)
+Migrating to CreateMemories (20120410012810)
+Migrating to CreateGraphicMemories (20120410012931)
+Migrating to CreateCompaniesLaptos (20120410020154)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateLaptops (20120410011653)
+Migrating to CreateCompanies (20120410012105)
+Migrating to CreateHardDrives (20120410012337)
+Migrating to CreateCores (20120410012715)
+Migrating to CreateMemories (20120410012810)
+Migrating to CreateGraphicMemories (20120410012931)
+Migrating to CreateCompaniesLaptos (20120410020154)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateLaptops (20120410011653)
+Migrating to CreateCompanies (20120410012105)
+Migrating to CreateHardDrives (20120410012337)
+Migrating to CreateCores (20120410012715)
+Migrating to CreateMemories (20120410012810)
+Migrating to CreateGraphicMemories (20120410012931)
+Migrating to CreateCompaniesLaptos (20120410020154)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateLaptops (20120410011653)
+Migrating to CreateCompanies (20120410012105)
+Migrating to CreateHardDrives (20120410012337)
+Migrating to CreateCores (20120410012715)
+Migrating to CreateMemories (20120410012810)
+Migrating to CreateGraphicMemories (20120410012931)
+Migrating to CreateCompaniesLaptos (20120410020154)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "companies_laptops" ("laptops_id" integer, "companies_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120410020154')[0m
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("companies")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("companies_laptops")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("cores")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("graphic_memories")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hard_drives")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("laptops")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("memories")[0m
+
+
+Started GET "/laptops/new" for 127.0.0.1 at Mon Apr 09 22:27:33 -0400 2012
+Processing by LaptopsController#new as HTML
+  Rendered laptops/_form.html.erb (41.8ms)
+  Rendered laptops/new.html.erb within layouts/application (58.3ms)
+Compiled companies.css  (33ms)  (pid 29888)
+Compiled cores.css  (3ms)  (pid 29888)
+Compiled graphic_memories.css  (3ms)  (pid 29888)
+Compiled hard_drives.css  (1ms)  (pid 29888)
+Compiled memories.css  (1ms)  (pid 29888)
+Compiled application.css  (191ms)  (pid 29888)
+Compiled companies.js  (496ms)  (pid 29888)
+Compiled cores.js  (54ms)  (pid 29888)
+Compiled graphic_memories.js  (55ms)  (pid 29888)
+Compiled hard_drives.js  (51ms)  (pid 29888)
+Compiled memories.js  (55ms)  (pid 29888)
+Compiled application.js  (942ms)  (pid 29888)
+Completed 200 OK in 1378ms (Views: 1361.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/hard_drives.css?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /hard_drives.css - 200 OK (4ms)
+
+
+Started GET "/assets/cores.css?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /cores.css - 200 OK (2ms)
+
+
+Started GET "/assets/companies.css?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /companies.css - 200 OK (1ms)
+
+
+Started GET "/assets/memories.css?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /memories.css - 200 OK (2ms)
+
+
+Started GET "/assets/graphic_memories.css?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /graphic_memories.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/companies.js?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /companies.js - 200 OK (1ms)
+
+
+Started GET "/assets/laptops.css?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /laptops.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cores.js?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /cores.js - 200 OK (2ms)
+
+
+Started GET "/assets/graphic_memories.js?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /graphic_memories.js - 200 OK (1ms)
+
+
+Started GET "/assets/hard_drives.js?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /hard_drives.js - 200 OK (2ms)
+
+
+Started GET "/assets/memories.js?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /memories.js - 200 OK (2ms)
+
+
+Started GET "/assets/laptops.js?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /laptops.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Apr 09 22:27:35 -0400 2012
+Served asset /application.js - 304 Not Modified (11ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateLaptops (20120410011653)
+Migrating to CreateCompanies (20120410012105)
+Migrating to CreateHardDrives (20120410012337)
+Migrating to CreateCores (20120410012715)
+Migrating to CreateMemories (20120410012810)
+Migrating to CreateGraphicMemories (20120410012931)
+Migrating to CreateCompaniesLaptos (20120410020154)
+Migrating to CreateCompanyLaptops (20120410022126)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "company_laptops" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_id" integer, "user_id" integer, "cantidad" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120410022126')[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("companies")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("companies_laptops")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("company_laptops")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("cores")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("graphic_memories")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hard_drives")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("laptops")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("memories")
+
+
+Started GET "/laptops" for 127.0.0.1 at Mon Apr 09 22:28:54 -0400 2012
+Processing by LaptopsController#index as HTML
+  [1m[36mLaptop Load (0.1ms)[0m  [1mSELECT "laptops".* FROM "laptops" [0m
+  Rendered laptops/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 76ms (Views: 62.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Mon Apr 09 22:28:54 -0400 2012
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/laptops.css?body=1" for 127.0.0.1 at Mon Apr 09 22:28:54 -0400 2012
+Served asset /laptops.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/laptops.js?body=1" for 127.0.0.1 at Mon Apr 09 22:28:54 -0400 2012
+Served asset /laptops.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Mon Apr 09 22:28:54 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Apr 09 22:28:54 -0400 2012
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/laptops/new" for 127.0.0.1 at Mon Apr 09 22:28:56 -0400 2012
+Processing by LaptopsController#new as HTML
+  Rendered laptops/_form.html.erb (4.7ms)
+  Rendered laptops/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Mon Apr 09 22:28:56 -0400 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/laptops.css?body=1" for 127.0.0.1 at Mon Apr 09 22:28:56 -0400 2012
+Served asset /laptops.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Mon Apr 09 22:28:56 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/laptops.js?body=1" for 127.0.0.1 at Mon Apr 09 22:28:56 -0400 2012
+Served asset /laptops.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Apr 09 22:28:56 -0400 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/laptops" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Processing by LaptopsController#index as HTML
+  [1m[36mLaptop Load (0.1ms)[0m  [1mSELECT "laptops".* FROM "laptops" [0m
+  Rendered laptops/index.html.erb within layouts/application (1.4ms)
+Compiled company_laptop.css  (4ms)  (pid 29932)
+Compiled company_laptops.css  (1ms)  (pid 29932)
+Compiled laptop.css  (1ms)  (pid 29932)
+Compiled application.css  (70ms)  (pid 29932)
+Compiled company_laptop.js  (122ms)  (pid 29932)
+Compiled company_laptops.js  (59ms)  (pid 29932)
+Compiled laptop.js  (53ms)  (pid 29932)
+Compiled application.js  (265ms)  (pid 29932)
+Completed 200 OK in 438ms (Views: 429.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/company_laptop.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /company_laptop.css - 200 OK (2ms)
+
+
+Started GET "/assets/laptop.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /laptop.css - 200 OK (3ms)
+
+
+Started GET "/assets/company_laptops.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /company_laptops.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/cores.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /cores.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/companies.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /companies.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/graphic_memories.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /graphic_memories.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hard_drives.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /hard_drives.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/laptops.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /laptops.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/company_laptop.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /company_laptop.js - 200 OK (1ms)
+
+
+Started GET "/assets/company_laptops.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /company_laptops.js - 200 OK (1ms)
+
+
+Started GET "/assets/memories.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /memories.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/laptop.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /laptop.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/companies.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /companies.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cores.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /cores.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/graphic_memories.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /graphic_memories.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hard_drives.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /hard_drives.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/laptops.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /laptops.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/memories.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /memories.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:17 -0400 2012
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/laptops/new" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Processing by LaptopsController#new as HTML
+  Rendered laptops/_form.html.erb (4.5ms)
+  Rendered laptops/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/graphic_memories.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /graphic_memories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cores.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /cores.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/companies.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /companies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/laptops.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /laptops.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hard_drives.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /hard_drives.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/memories.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /memories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/companies.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /companies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cores.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /cores.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/graphic_memories.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /graphic_memories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hard_drives.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /hard_drives.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/laptops.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /laptops.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/memories.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /memories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:20 -0400 2012
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/laptops" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Processing by LaptopsController#index as HTML
+  [1m[35mLaptop Load (0.2ms)[0m  SELECT "laptops".* FROM "laptops" 
+  Rendered laptops/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cores.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /cores.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/companies.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /companies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/laptops.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /laptops.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hard_drives.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /hard_drives.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/graphic_memories.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /graphic_memories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/memories.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /memories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/companies.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /companies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cores.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /cores.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/graphic_memories.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /graphic_memories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hard_drives.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /hard_drives.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/laptops.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /laptops.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/memories.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /memories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon Apr 09 22:40:34 -0400 2012
+Served asset /application.js - 304 Not Modified (0ms)

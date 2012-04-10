@@ -1,0 +1,29 @@
+<h1>Listing graphic_memories</h1>
+
+<table>
+  <tr>
+    <th>Marca</th>
+    <th>Modelo</th>
+    <th>Ddr</th>
+    <th>Capacidad</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @graphic_memories.each do |graphic_memory| %>
+  <tr>
+    <td><%= graphic_memory.marca %></td>
+    <td><%= graphic_memory.modelo %></td>
+    <td><%= graphic_memory.ddr %></td>
+    <td><%= graphic_memory.capacidad %></td>
+    <td><%= link_to 'Show', graphic_memory %></td>
+    <td><%= link_to 'Edit', edit_graphic_memory_path(graphic_memory) %></td>
+    <td><%= link_to 'Destroy', graphic_memory, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Graphic memory', new_graphic_memory_path %>

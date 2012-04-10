@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Marca:</b>
+  <%= @memory.marca %>
+</p>
+
+<p>
+  <b>Frecuencia:</b>
+  <%= @memory.frecuencia %>
+</p>
+
+<p>
+  <b>Tamaño:</b>
+  <%= @memory.tamaño %>
+</p>
+
+<p>
+  <b>Ddr:</b>
+  <%= @memory.ddr %>
+</p>
+
+
+<%= link_to 'Edit', edit_memory_path(@memory) %> |
+<%= link_to 'Back', memories_path %>

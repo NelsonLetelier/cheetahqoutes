@@ -1,0 +1,33 @@
+<h1>Listing cores</h1>
+
+<table>
+  <tr>
+    <th>Frecuencia</th>
+    <th>Marca</th>
+    <th>Nucleos</th>
+    <th>Modelo</th>
+    <th>Nombre</th>
+    <th>Thread</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cores.each do |core| %>
+  <tr>
+    <td><%= core.frecuencia %></td>
+    <td><%= core.marca %></td>
+    <td><%= core.nucleos %></td>
+    <td><%= core.modelo %></td>
+    <td><%= core.nombre %></td>
+    <td><%= core.thread %></td>
+    <td><%= link_to 'Show', core %></td>
+    <td><%= link_to 'Edit', edit_core_path(core) %></td>
+    <td><%= link_to 'Destroy', core, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Core', new_core_path %>

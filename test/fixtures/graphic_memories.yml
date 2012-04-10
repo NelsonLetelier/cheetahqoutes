@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  marca: MyString
+  modelo: MyString
+  ddr: 1
+  capacidad: 1
+
+two:
+  marca: MyString
+  modelo: MyString
+  ddr: 1
+  capacidad: 1

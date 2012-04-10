@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  frecuencia: 1
+  marca: 1
+  nucleos: 1
+  modelo: MyString
+  nombre: MyString
+  thread: 1
+
+two:
+  frecuencia: 1
+  marca: 1
+  nucleos: 1
+  modelo: MyString
+  nombre: MyString
+  thread: 1

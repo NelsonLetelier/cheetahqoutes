@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Marca:</b>
+  <%= @hard_drife.marca %>
+</p>
+
+<p>
+  <b>Tamano:</b>
+  <%= @hard_drife.tamano %>
+</p>
+
+<p>
+  <b>Cache:</b>
+  <%= @hard_drife.cache %>
+</p>
+
+<p>
+  <b>Rpm:</b>
+  <%= @hard_drife.rpm %>
+</p>
+
+
+<%= link_to 'Edit', edit_hard_drife_path(@hard_drife) %> |
+<%= link_to 'Back', hard_drives_path %>

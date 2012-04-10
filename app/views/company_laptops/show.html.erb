@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @company_laptop.company_id %>
+</p>
+
+<p>
+  <b>Laptop:</b>
+  <%= @company_laptop.laptop_id %>
+</p>
+
+<p>
+  <b>Cantidad:</b>
+  <%= @company_laptop.cantidad %>
+</p>
+
+
+<%= link_to 'Edit', edit_company_laptop_path(@company_laptop) %> |
+<%= link_to 'Back', company_laptops_path %>

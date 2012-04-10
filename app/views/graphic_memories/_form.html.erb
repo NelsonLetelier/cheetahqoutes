@@ -1,0 +1,33 @@
+<%= form_for(@graphic_memory) do |f| %>
+  <% if @graphic_memory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@graphic_memory.errors.count, "error") %> prohibited this graphic_memory from being saved:</h2>
+
+      <ul>
+      <% @graphic_memory.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :marca %><br />
+    <%= f.text_field :marca %>
+  </div>
+  <div class="field">
+    <%= f.label :modelo %><br />
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :ddr %><br />
+    <%= f.number_field :ddr %>
+  </div>
+  <div class="field">
+    <%= f.label :capacidad %><br />
+    <%= f.number_field :capacidad %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

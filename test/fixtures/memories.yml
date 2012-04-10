@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  marca: MyString
+  frecuencia: 1
+  tamaño: 1
+  ddr: 1
+
+two:
+  marca: MyString
+  frecuencia: 1
+  tamaño: 1
+  ddr: 1

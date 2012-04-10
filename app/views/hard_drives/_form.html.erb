@@ -1,0 +1,33 @@
+<%= form_for(@hard_drife) do |f| %>
+  <% if @hard_drife.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hard_drife.errors.count, "error") %> prohibited this hard_drife from being saved:</h2>
+
+      <ul>
+      <% @hard_drife.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :marca %><br />
+    <%= f.text_field :marca %>
+  </div>
+  <div class="field">
+    <%= f.label :tamano %><br />
+    <%= f.number_field :tamano %>
+  </div>
+  <div class="field">
+    <%= f.label :cache %><br />
+    <%= f.number_field :cache %>
+  </div>
+  <div class="field">
+    <%= f.label :rpm %><br />
+    <%= f.text_field :rpm %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

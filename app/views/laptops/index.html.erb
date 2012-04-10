@@ -1,0 +1,27 @@
+<h1>Listing laptops</h1>
+
+<table>
+  <tr>
+    <th>Precio</th>
+    <th>Modelo</th>
+    <th>Marca</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @laptops.each do |laptop| %>
+  <tr>
+    <td><%= laptop.precio %></td>
+    <td><%= laptop.modelo %></td>
+    <td><%= laptop.marca %></td>
+    <td><%= link_to 'Show', laptop %></td>
+    <td><%= link_to 'Edit', edit_laptop_path(laptop) %></td>
+    <td><%= link_to 'Destroy', laptop, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Laptop', new_laptop_path %>

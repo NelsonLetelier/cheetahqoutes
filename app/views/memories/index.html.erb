@@ -1,0 +1,29 @@
+<h1>Listing memories</h1>
+
+<table>
+  <tr>
+    <th>Marca</th>
+    <th>Frecuencia</th>
+    <th>Tamaño</th>
+    <th>Ddr</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @memories.each do |memory| %>
+  <tr>
+    <td><%= memory.marca %></td>
+    <td><%= memory.frecuencia %></td>
+    <td><%= memory.tamaño %></td>
+    <td><%= memory.ddr %></td>
+    <td><%= link_to 'Show', memory %></td>
+    <td><%= link_to 'Edit', edit_memory_path(memory) %></td>
+    <td><%= link_to 'Destroy', memory, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Memory', new_memory_path %>

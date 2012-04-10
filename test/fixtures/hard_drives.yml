@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  marca: MyString
+  tamano: 1
+  cache: 1
+  rpm: MyString
+
+two:
+  marca: MyString
+  tamano: 1
+  cache: 1
+  rpm: MyString

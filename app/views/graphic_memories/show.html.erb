@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Marca:</b>
+  <%= @graphic_memory.marca %>
+</p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @graphic_memory.modelo %>
+</p>
+
+<p>
+  <b>Ddr:</b>
+  <%= @graphic_memory.ddr %>
+</p>
+
+<p>
+  <b>Capacidad:</b>
+  <%= @graphic_memory.capacidad %>
+</p>
+
+
+<%= link_to 'Edit', edit_graphic_memory_path(@graphic_memory) %> |
+<%= link_to 'Back', graphic_memories_path %>

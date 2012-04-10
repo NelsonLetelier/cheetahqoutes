@@ -1,0 +1,29 @@
+<h1>Listing hard_drives</h1>
+
+<table>
+  <tr>
+    <th>Marca</th>
+    <th>Tamano</th>
+    <th>Cache</th>
+    <th>Rpm</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hard_drives.each do |hard_drife| %>
+  <tr>
+    <td><%= hard_drife.marca %></td>
+    <td><%= hard_drife.tamano %></td>
+    <td><%= hard_drife.cache %></td>
+    <td><%= hard_drife.rpm %></td>
+    <td><%= link_to 'Show', hard_drife %></td>
+    <td><%= link_to 'Edit', edit_hard_drife_path(hard_drife) %></td>
+    <td><%= link_to 'Destroy', hard_drife, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hard drive', new_hard_drife_path %>
